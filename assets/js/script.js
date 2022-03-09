@@ -2,14 +2,14 @@
 
 //global variables
 var startBtn = document.querySelector("#startBtn");
-var timerEl = document.querySelector("#countdown")
+var timerEl = document.querySelector("#countdown");
+var timer = document.querySelector("#timer");
 //if you want to: think about making a rules page with a button to continue or to exit the quiz. once continue is pushed the quiz will begin.
 
 //create a timer for the page that will be triggered later.
+//this function is the timer
 function countdown() {
     var timeLeft = 120;
-  
-    // TODO: Use the `setInterval()` method to call a function to be executed every 1000 milliseconds
     var timeInterval = setInterval(function () {
       //
       timeLeft--;
@@ -17,7 +17,7 @@ function countdown() {
       // YOUR CODE HERE
       if (timeLeft === 0) {
         clearInterval(timeInterval);
-        displayMessage();
+        timer.textContent = "Time is up!";
       }
       //
     }, 1000);
