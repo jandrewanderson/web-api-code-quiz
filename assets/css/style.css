@@ -40,7 +40,7 @@
 }
 
 .main-container .header h2 {
-    /* outline: solid 1px black; */
+    outline: solid 1px black;
     width: 19%;
 }
 
