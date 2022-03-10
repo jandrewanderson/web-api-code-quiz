@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web API: Coding Quiz</title>
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/style2.css" />
+</head>
+
+
+<body class="body">
+    <div class="main-container">
+        <section class="header">
+            <header>
+                <div class="header1">
+                    <h1>Web API: Coding Quiz</h1>
+                    <h2 id="timer">Timer: <span id="countdown"></span></h2>
+                </div>  
+            </header>
+        </section>
+
+        <section class="section-body">
+            <div id="questions">
+                <div>
+                    <h3 class="question-number"></h3>
+                    <h4 class="question-content"></h4>
+                    <div class="answer-content">
+                        <button class="list-item item1"></button>
+                        <button class="list-item item2"></button>
+                        <button class="list-item item3"></button>
+                        <button class="list-item item4"></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="startBtn" class="button">
+            <button id="highscore-button">
+                <p>
+                    HighScores
+                </p>
+            </button>
+            <button id="start">
+                <p>
+                    Start Quiz
+                </p>
+            </button>
+            <button id="next">
+                <p>
+                    Next
+                </p>
+            </button>
+        </section>
+       
+
+        <script src="./assets/js/script2.js"></script>
+    </div>
+
+    <div id="highscore" >
+            <h5>HighScores:</h5>
+            <ol>
+                <!-- js will insert scores here -->
+            </ol>
+        </div>
+    </div>
+    
+</body>
+
+</html>
