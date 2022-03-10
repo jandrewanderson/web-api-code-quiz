@@ -38,6 +38,8 @@
         var answer2 = document.createElement("li");
         var answer3 = document.createElement("li");
         var answer4 = document.createElement("li");
+        //this var is the actual response for the answers
+        var ans/* = false*/; //change = to true or false to test different effects
 
 
     //all appends 
@@ -83,12 +85,75 @@
         answer2.setAttribute("style", "background-color: #b6b8b9; color: blue; outline: 1px solid black; border-radius: 5px; margin: 1rem; padding: 1.5rem;");
         answer3.setAttribute("style", "background-color: #b6b8b9; color: blue; outline: 1px solid black; border-radius: 5px; margin: 1rem; padding: 1.5rem;");
         answer4.setAttribute("style", "background-color: #b6b8b9; color: blue; outline: 1px solid black; border-radius: 5px; margin: 1rem; padding: 1.5rem;");
-        // answer2.setAttribute();
-        // answer3.setAttribute();
-        // answer4.setAttribute();
+        
+    //addEventListener for answers
 
+        //mouseover
+        answer1.addEventListener("mouseover", function(event){
+            answer1.setAttribute("style", "background-color: #5c5c5c; color: blue; outline: 3px solid black; border-radius: 5px; margin: 1rem; padding: 1.5rem;");
+            // console.log(event);
+        });
+        answer2.addEventListener("mouseover", function(event){
+            answer2.setAttribute("style", "background-color: #5c5c5c; color: blue; outline: 3px solid black; border-radius: 5px; margin: 1rem; padding: 1.5rem;");
+            // console.log(event);
+        });
+        answer3.addEventListener("mouseover", function(event){
+            answer3.setAttribute("style", "background-color: #5c5c5c; color: blue; outline: 3px solid black; border-radius: 5px; margin: 1rem; padding: 1.5rem;");
+            // console.log(event);
+        });
+        answer4.addEventListener("mouseover", function(event){
+            answer4.setAttribute("style", "background-color: #5c5c5c; color: blue; outline: 3px solid black; border-radius: 5px; margin: 1rem; padding: 1.5rem;");
+            // console.log(event);
+        });
+            
+        //mouseout
+        answer1.addEventListener("mouseout", function(event){
+            answer1.setAttribute("style", "background-color: #b6b8b9; color: blue; outline: 1px solid black; border-radius: 5px; margin: 1rem; padding: 1.5rem;");
+            // console.log(event);
+        });
+        answer2.addEventListener("mouseout", function(event){
+            answer2.setAttribute("style", "background-color: #b6b8b9; color: blue; outline: 1px solid black; border-radius: 5px; margin: 1rem; padding: 1.5rem;");
+            // console.log(event);
+        });
+        answer3.addEventListener("mouseout", function(event){
+            answer3.setAttribute("style", "background-color: #b6b8b9; color: blue; outline: 1px solid black; border-radius: 5px; margin: 1rem; padding: 1.5rem;");
+            // console.log(event);
+        });
+        answer4.addEventListener("mouseout", function(event){
+            answer4.setAttribute("style", "background-color: #b6b8b9; color: blue; outline: 1px solid black; border-radius: 5px; margin: 1rem; padding: 1.5rem;");
+            // console.log(event);
+        });
 
-
+        //click
+        //on correct answer the background will change to light blue on incorrect change to light red.
+        answer1.addEventListener("click", function(event){
+            if (ans === false){
+                answer1.setAttribute("style", "background-color: #ff6262; color: black; outline: 3px solid black; border-radius: 5px; margin: 1rem; padding: 1.5rem;");
+            }else
+            answer1.setAttribute("style", "background-color: #00a2ff; color: black; outline: 3px solid black; border-radius: 5px; margin: 1rem; padding: 1.5rem;");
+            // console.log(event);
+        });
+        answer2.addEventListener("click", function(event){
+            if (ans === false){
+                answer2.setAttribute("style", "background-color: #ff6262; color: black; outline: 3px solid black; border-radius: 5px; margin: 1rem; padding: 1.5rem;");
+            }else
+                answer2.setAttribute("style", "background-color: #00a2ff; color: black; outline: 3px solid black; border-radius: 5px; margin: 1rem; padding: 1.5rem;");
+            // console.log(event);
+        });
+        answer3.addEventListener("click", function(event){
+            if (ans === false){
+                answer3.setAttribute("style", "background-color: #ff6262; color: black; outline: 3px solid black; border-radius: 5px; margin: 1rem; padding: 1.5rem;");
+            }else
+                answer3.setAttribute("style", "background-color: #00a2ff; color: black; outline: 3px solid black; border-radius: 5px; margin: 1rem; padding: 1.5rem;");
+            // console.log(event);
+        });
+        answer4.addEventListener("click", function(event){
+            if (ans === false){
+                answer4.setAttribute("style", "background-color: #ff6262; color: black; outline: 3px solid black; border-radius: 5px; margin: 1rem; padding: 1.5rem;");
+            }else
+                answer4.setAttribute("style", "background-color: #00a2ff; color: black; outline: 3px solid black; border-radius: 5px; margin: 1rem; padding: 1.5rem;");
+            // console.log(event);
+        });
 
 
 
