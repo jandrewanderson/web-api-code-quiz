@@ -39,7 +39,7 @@
         var answer3 = document.createElement("li");
         var answer4 = document.createElement("li");
         //this var is the actual response for the answers
-        var ansValue = false; //change = to true or false to test different effects
+        var ansValue; //change = to true or false to test different effects
         var ans = quesList;
         var ques = quesList;
 
@@ -186,6 +186,7 @@ function countdown() {
 //if a question is answered incorrectly, remove time from the clock.
 
     //here are all the questions
+
 var quesList = [
     {
         ques: "What does console.log() do in Javascript?",
@@ -197,58 +198,60 @@ var quesList = [
         ]
     },
     {
-        ques: "What does console.log() do in Javascript?",
+        ques: "What is a variable in Javascript?",
         ans: [
-            { text: "Saves the the search history in the browser", ansValue: false},
-            { text: "Creates a message in Notepad", ansValue: false},
-            { text: "Displays the IP address of the device you are using", ansValue: false},
-            { text: "Outputs a message to the dev console", ansValue: true},
+            { text: "A symbol standing in for an unknown numerical value in an equation", ansValue: false},
+            { text: "Something that stores a data value that can be changed later on", ansValue: true},
+            { text: "A common error message", ansValue: false},
+            { text: "The last name of the most successful coder in history", ansValue: false},
+        ]
+    },
+    {
+        ques: "Which on of these is NOT a primitive data type?",
+        ans: [
+            { text: "String", ansValue: false},
+            { text: "Boolean", ansValue: false},
+            { text: "Undefined", ansValue: false},
+            { text: "Object", ansValue: true},
+        ]
+    },
+    {
+        ques: "What does == mean in Javascript?",
+        ans: [
+            { text: "It is used as a comparison between two variables regardless of the datatype.", ansValue: true},
+            { text: "It is used as a comparison between two variables and will check the datatype.", ansValue: false},
+            { text: "It is used to assign a value of a variable.", ansValue: false},
+            { text: "It makes the value of a variable unchangeable.", ansValue: false},
+        ]
+    },
+    {
+        ques: "What does === mean in Javascript?",
+        ans: [
+            { text: "It is used as a comparison between two variables regardless of the datatype.", ansValue: false},
+            { text: "It is used as a comparison between two variables and will check the datatype.", ansValue: true},
+            { text: "It is used to assign a value of a variable.", ansValue: false},
+            { text: "It makes the value of a variable unchangeable.", ansValue: false},
+        ]
+    },
+    {
+        ques: "Which member of TMNT does this page look like?",
+        ans: [
+            { text: "Michelangelo", ansValue: false},
+            { text: "Leonardo", ansValue: true},
+            { text: "Donatello", ansValue: false},
+            { text: "Raphael", ansValue: false},
+        ]
+    },
+    {
+        ques: "Is Gary a good teacher?",
+        ans: [
+            { text: "Yes", ansValue: true},
+            { text: "No", ansValue: false},
         ]
     }
+    
 ]
-        /* 
-            1. What does console.log() do in Javascript?
-                Saves the the search history in the browser
-                Creates a message in Notepad
-                Displays the IP address of the device you are using
-                Outputs a message to the dev console (correct)
-            
-            2. What is a variable in Javascript?
-                A symbol standing in for an unknown numerical value in an equation
-                Something that stores a data value that can be changed later on (correct)
-                A common error message
-                The last name of the most successful coder in history
-            
-            3. Which on of these is NOT a primitive data type?
-                String
-                Boolean
-                Undefined
-                Object (correct)
-            
-            4. What does == mean in Javascript?
-                It is used as a comparison between two variables regardless of the datatype.
-                It is used as a comparison between two variables and will check the datatype.
-                It is used to assign a value of a variable.
-                It makes the value of a variable unchangeable.
-            
-            5. What does === mean in Javascript?
-                It is used to assign a value of a variable.
-                It is used as a comparison between two variables regardless of the datatype.
-                It is used as a comparison between two variables and will check the datatype.
-                It makes the value of a variable unchangeable.
 
-            6.
-
-            x1. Which member of TMNT does this page look like?
-                Michelangelo
-                Leonardo (correct)
-                Donatello
-                Raphael
-
-            x2. Is Gary a good teacher?
-                Yes (correct)
-                No 
-        */
 
 //repeat the process of displaying a question and moving to the next question when answered.
 
