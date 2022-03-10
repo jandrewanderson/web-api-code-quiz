@@ -39,8 +39,9 @@
         var answer3 = document.createElement("li");
         var answer4 = document.createElement("li");
         //this var is the actual response for the answers
-        var ans/* = false*/; //change = to true or false to test different effects
-
+        var ansValue = false; //change = to true or false to test different effects
+        var ans = quesList;
+        var ques = quesList;
 
     //all appends 
 
@@ -60,13 +61,13 @@
         //contents for h3
         createQuestionH3.textContent = "Question # (x)" //+ questionNumber[index]; //add this part later and remove x
         //contents for h4
-        createQuestionH4.textContent = "Question: "
+        createQuestionH4.textContent = "Question: " + ques;
         //content for ol
         //contents for li
-        answer1.textContent = "A. " //+ answers content. One will be correct and the other 3 incorrect.;
-        answer2.textContent = "B. " //+ answers content. One will be correct and the other 3 incorrect.;
-        answer3.textContent = "C. " //+ answers content. One will be correct and the other 3 incorrect.;
-        answer4.textContent = "D. " //+ answers content. One will be correct and the other 3 incorrect.;
+        answer1.textContent = "A. " + ans; //+ answers content. One will be correct and the other 3 incorrect.;
+        answer2.textContent = "B. " + ans;//+ answers content. One will be correct and the other 3 incorrect.;
+        answer3.textContent = "C. " + ans;//+ answers content. One will be correct and the other 3 incorrect.;
+        answer4.textContent = "D. " + ans;//+ answers content. One will be correct and the other 3 incorrect.;
 
     //setAttribute for each
 
@@ -127,28 +128,28 @@
         //click
         //on correct answer the background will change to light blue on incorrect change to light red.
         answer1.addEventListener("click", function(event){
-            if (ans === false){
+            if (ansValue === false){
                 answer1.setAttribute("style", "background-color: #ff6262; color: black; outline: 3px solid black; border-radius: 5px; margin: 1rem; padding: 1.5rem;");
             }else
             answer1.setAttribute("style", "background-color: #00a2ff; color: black; outline: 3px solid black; border-radius: 5px; margin: 1rem; padding: 1.5rem;");
             // console.log(event);
         });
         answer2.addEventListener("click", function(event){
-            if (ans === false){
+            if (ansValue === false){
                 answer2.setAttribute("style", "background-color: #ff6262; color: black; outline: 3px solid black; border-radius: 5px; margin: 1rem; padding: 1.5rem;");
             }else
                 answer2.setAttribute("style", "background-color: #00a2ff; color: black; outline: 3px solid black; border-radius: 5px; margin: 1rem; padding: 1.5rem;");
             // console.log(event);
         });
         answer3.addEventListener("click", function(event){
-            if (ans === false){
+            if (ansValue === false){
                 answer3.setAttribute("style", "background-color: #ff6262; color: black; outline: 3px solid black; border-radius: 5px; margin: 1rem; padding: 1.5rem;");
             }else
                 answer3.setAttribute("style", "background-color: #00a2ff; color: black; outline: 3px solid black; border-radius: 5px; margin: 1rem; padding: 1.5rem;");
             // console.log(event);
         });
         answer4.addEventListener("click", function(event){
-            if (ans === false){
+            if (ansValue === false){
                 answer4.setAttribute("style", "background-color: #ff6262; color: black; outline: 3px solid black; border-radius: 5px; margin: 1rem; padding: 1.5rem;");
             }else
                 answer4.setAttribute("style", "background-color: #00a2ff; color: black; outline: 3px solid black; border-radius: 5px; margin: 1rem; padding: 1.5rem;");
@@ -185,6 +186,26 @@ function countdown() {
 //if a question is answered incorrectly, remove time from the clock.
 
     //here are all the questions
+var quesList = [
+    {
+        ques: "What does console.log() do in Javascript?",
+        ans: [
+            { text: "Saves the the search history in the browser", ansValue: false},
+            { text: "Creates a message in Notepad", ansValue: false},
+            { text: "Displays the IP address of the device you are using", ansValue: false},
+            { text: "Outputs a message to the dev console", ansValue: true},
+        ]
+    },
+    {
+        ques: "What does console.log() do in Javascript?",
+        ans: [
+            { text: "Saves the the search history in the browser", ansValue: false},
+            { text: "Creates a message in Notepad", ansValue: false},
+            { text: "Displays the IP address of the device you are using", ansValue: false},
+            { text: "Outputs a message to the dev console", ansValue: true},
+        ]
+    }
+]
         /* 
             1. What does console.log() do in Javascript?
                 Saves the the search history in the browser
