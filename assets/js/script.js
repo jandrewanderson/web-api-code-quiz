@@ -17,8 +17,14 @@ var ansValue = false;
 var score = 0;
 var bestScores;
 
+//var for local storage local storage
+var yourScore = localStorage.getItem("yourScore");
+
 //var for the overall timer; timeLeft
 var timeLeft = 60;
+
+//when page loads load high scores
+loadHighScores();
 
 //eventListeners
 //listeners for my buttons
@@ -59,10 +65,16 @@ function countdown() {
 //I am not sure why this is not working.
 function updateHighScore(){
     var highScoreEntryLi = document.createElement("li");
-    var highScoreEntryOl = document.createElement("ol");
-    highScoreEntryLi.textContent = bestScores + score;
-    highScoreEntry.appendChild(highScoreEntryOl);
-    highScoreEntryOl.appendChild(highScoreEntryLi);
+    yourScore = (highScoreEntryLi.textContent = bestScores + ": " + score);
+    highScoreEntry.appendChild(highScoreEntryLi);
+    localStorage.setItem("yourScore", yourScore);
+}
+
+function loadHighScores(){
+    var finalScore = localStorage.getItem("yourScore");
+    var pullHighScores = document.createElement("li");
+    pullHighScores.textContent = finalScore;
+    highScoreEntry.appendChild(pullHighScores);
 }
 
 
