@@ -4,6 +4,7 @@
 var startBtn = document.getElementById("start");
 var nextBtn = document.getElementById("next");
 var highScoreBtn = document.getElementById("highscore-button");
+var highScoreEntry = document.getElementById("highscore-entry");
 
 //countdown
 var timerEl = document.querySelector("#countdown");
@@ -17,7 +18,7 @@ var score = 0;
 var bestScores;
 
 //var for the overall timer; timeLeft
-var timeLeft = 30;
+var timeLeft = 60;
 
 //eventListeners
 //listeners for my buttons
@@ -48,7 +49,11 @@ function countdown() {
         if (bestScores === null){
             return; //if user hits cancel the high score will not be tracked by their name.
         }
-        //now 
+        //now you need to display the text in the highscore page
+        
+        var highScoreEntryItem = document.createElement("li");
+        highScoreEntryItem.textContent = bestScores + score;
+        highScoreEntry.appendChild(highScoreEntryItem);
       }
       //
     }, 1000);
@@ -158,11 +163,11 @@ var buttonSection = document.getElementById("start-button");
 function question1(){
     
     //variables for the question and answers
-    var question = "Will I ever get this done?";
-    var answers1 = "yes";
-    var answers2 = "no";
-    var answers3 = "maybe";
-    var answers4 = "probably not";
+    var question = "What does console.log() do in Javascript?";
+    var answers1 = "Saves the the search history in the browser";
+    var answers2 = "Creates a message in Notepad";
+    var answers3 = "Displays the IP address of the device you are using";
+    var answers4 = "Outputs a message to the dev console";
 
     //creating variables for each answer button
     var questionContainer = document.createElement("div");
@@ -221,8 +226,8 @@ function question1(){
     //create eventListener
     answerlist1.addEventListener("click", wrong);
     answerlist2.addEventListener("click", wrong);
-    answerlist3.addEventListener("click", correct);
-    answerlist4.addEventListener("click", wrong);
+    answerlist3.addEventListener("click", wrong);
+    answerlist4.addEventListener("click", correct);
 
     function correct(){
         if (score === 0){
@@ -247,11 +252,11 @@ function question1(){
 function question2(){
 
     //variables for the question and answers
-    var question = "Will I ever get this done?";
-    var answers1 = "yes";
-    var answers2 = "no";
-    var answers3 = "maybe";
-    var answers4 = "probably not";
+    var question = "What is a variable in Javascript?";
+    var answers1 = "A symbol standing in for an unknown numerical value in an equation";
+    var answers2 = "Something that stores a data value that can be changed later on";
+    var answers3 = "A common error message";
+    var answers4 = "The last name of the most successful coder in history";
 
     //creating variables for each answer button
     var questionContainer = document.createElement("div");
@@ -309,8 +314,8 @@ function question2(){
 
     //create eventListener
     answerlist1.addEventListener("click", wrong);
-    answerlist2.addEventListener("click", wrong);
-    answerlist3.addEventListener("click", correct);
+    answerlist2.addEventListener("click", correct);
+    answerlist3.addEventListener("click", wrong);
     answerlist4.addEventListener("click", wrong);
 
     function correct(){
@@ -335,11 +340,11 @@ function question2(){
 function question3(){
 
     //variables for the question and answers
-    var question = "Will I ever get this done?";
-    var answers1 = "yes";
-    var answers2 = "no";
-    var answers3 = "maybe";
-    var answers4 = "probably not";
+    var question = "Which on of these is NOT a primitive data type?";
+    var answers1 = "String";
+    var answers2 = "Boolean";
+    var answers3 = "Undefined";
+    var answers4 = "Object";
 
     //creating variables for each answer button
     var questionContainer = document.createElement("div");
@@ -398,8 +403,8 @@ function question3(){
     //create eventListener
     answerlist1.addEventListener("click", wrong);
     answerlist2.addEventListener("click", wrong);
-    answerlist3.addEventListener("click", correct);
-    answerlist4.addEventListener("click", wrong);
+    answerlist3.addEventListener("click", wrong);
+    answerlist4.addEventListener("click", correct);
 
     function correct(){
         if (score === 2){
@@ -423,11 +428,11 @@ function question3(){
 function question4(){
 
     //variables for the question and answers
-    var question = "Will I ever get this done?";
-    var answers1 = "yes";
-    var answers2 = "no";
-    var answers3 = "maybe";
-    var answers4 = "probably not";
+    var question = "What does == mean in Javascript?";
+    var answers1 = "It is used as a comparison between two variables regardless of the datatype.";
+    var answers2 = "It is used as a comparison between two variables and will check the datatype.";
+    var answers3 = "It is used to assign a value of a variable.";
+    var answers4 = "It makes the value of a variable unchangeable.";
 
     //creating variables for each answer button
     var questionContainer = document.createElement("div");
@@ -484,9 +489,9 @@ function question4(){
         });
 
     //create eventListener
-    answerlist1.addEventListener("click", wrong);
+    answerlist1.addEventListener("click", correct);
     answerlist2.addEventListener("click", wrong);
-    answerlist3.addEventListener("click", correct);
+    answerlist3.addEventListener("click", wrong);
     answerlist4.addEventListener("click", wrong);
 
     function correct(){
@@ -511,11 +516,11 @@ function question4(){
 function question5(){
 
     //variables for the question and answers
-    var question = "Will I ever get this done?";
-    var answers1 = "yes";
-    var answers2 = "no";
-    var answers3 = "maybe";
-    var answers4 = "probably not";
+    var question = "What does === mean in Javascript?";
+    var answers1 = "It is used to assign a value of a variable.";
+    var answers2 = "It is used as a comparison between two variables regardless of the datatype.";
+    var answers3 = "It is used as a comparison between two variables and will check the datatype.";
+    var answers4 = "It makes the value of a variable unchangeable.";
 
     //creating variables for each answer button
     var questionContainer = document.createElement("div");
@@ -600,11 +605,11 @@ function question5(){
 function question6(){
 
     //variables for the question and answers
-    var question = "Will I ever get this done?";
-    var answers1 = "yes";
-    var answers2 = "no";
-    var answers3 = "maybe";
-    var answers4 = "probably not";
+    var question = "Which symbol do you use to start and end an array?";
+    var answers1 = "()";
+    var answers2 = "\\";
+    var answers3 = ";;";
+    var answers4 = "[]";
 
     //creating variables for each answer button
     var questionContainer = document.createElement("div");
@@ -663,8 +668,8 @@ function question6(){
     //create eventListener
     answerlist1.addEventListener("click", wrong);
     answerlist2.addEventListener("click", wrong);
-    answerlist3.addEventListener("click", correct);
-    answerlist4.addEventListener("click", wrong);
+    answerlist3.addEventListener("click", wrong);
+    answerlist4.addEventListener("click", correct);
 
     function correct(){
         if (score === 5){
@@ -688,11 +693,11 @@ function question6(){
 function question7(){
 
     //variables for the question and answers
-    var question = "Will I ever get this done?";
-    var answers1 = "yes";
-    var answers2 = "no";
-    var answers3 = "maybe";
-    var answers4 = "probably not";
+    var question = "What does .setAttribute do in Javascript";
+    var answers1 = "It allows you to change the boolean value of a variable";
+    var answers2 = "It gives you the feeling of hope.";
+    var answers3 = "It allows you to change css styles on an element.";
+    var answers4 = "This is not a real function in Javascript.";
 
     //creating variables for each answer button
     var questionContainer = document.createElement("div");
@@ -776,11 +781,11 @@ function question7(){
 function question8(){
 
     //variables for the question and answers
-    var question = "Will I ever get this done?";
-    var answers1 = "yes";
-    var answers2 = "no";
-    var answers3 = "maybe";
-    var answers4 = "probably not";
+    var question = "What do the functions .createElement and .appendChild do?";
+    var answers1 = "They allow you to insert text into an element";
+    var answers2 = "They create an element and insert it onto the webpage";
+    var answers3 = "They start and end a function";
+    var answers4 = "This is not a real function in Javascript";
 
     //creating variables for each answer button
     var questionContainer = document.createElement("div");
@@ -838,8 +843,8 @@ function question8(){
 
     //create eventListener
     answerlist1.addEventListener("click", wrong);
-    answerlist2.addEventListener("click", wrong);
-    answerlist3.addEventListener("click", correct);
+    answerlist2.addEventListener("click", correct);
+    answerlist3.addEventListener("click", wrong);
     answerlist4.addEventListener("click", wrong);
 
     function correct(){
@@ -864,11 +869,11 @@ function question8(){
 function question9(){
 
     //variables for the question and answers
-    var question = "Will I ever get this done?";
-    var answers1 = "yes";
-    var answers2 = "no";
-    var answers3 = "maybe";
-    var answers4 = "probably not";
+    var question = "Is it a good idea to save sensitive information on the local storage?";
+    var answers1 = "Yes";
+    var answers2 = "No";
+    var answers3 = "Maybe";
+    var answers4 = "On occassion";
 
     //creating variables for each answer button
     var questionContainer = document.createElement("div");
@@ -926,8 +931,8 @@ function question9(){
 
     //create eventListener
     answerlist1.addEventListener("click", wrong);
-    answerlist2.addEventListener("click", wrong);
-    answerlist3.addEventListener("click", correct);
+    answerlist2.addEventListener("click", correct);
+    answerlist3.addEventListener("click", wrong);
     answerlist4.addEventListener("click", wrong);
 
     function correct(){
@@ -952,11 +957,11 @@ function question9(){
 function question10(){
 
     //variables for the question and answers
-    var question = "Will I ever get this done?";
-    var answers1 = "yes";
-    var answers2 = "no";
-    var answers3 = "maybe";
-    var answers4 = "probably not";
+    var question = "Is Javascript worth learning?";
+    var answers1 = "Yes";
+    var answers2 = "No";
+    var answers3 = "Maybe";
+    var answers4 = "Probably not";
 
     //creating variables for each answer button
     var questionContainer = document.createElement("div");
@@ -1013,9 +1018,9 @@ function question10(){
         });
 
     //create eventListener
-    answerlist1.addEventListener("click", wrong);
+    answerlist1.addEventListener("click", correct);
     answerlist2.addEventListener("click", wrong);
-    answerlist3.addEventListener("click", correct);
+    answerlist3.addEventListener("click", wrong);
     answerlist4.addEventListener("click", wrong);
 
     function correct(){
@@ -1040,11 +1045,11 @@ function question10(){
 function question1x(){
 
     //variables for the question and answers
-    var question = "Will I ever get this done?";
-    var answers1 = "yes";
-    var answers2 = "no";
-    var answers3 = "maybe";
-    var answers4 = "probably not";
+    var question = "Which member of TMNT does this page look like?";
+    var answers1 = "Michelangelo";
+    var answers2 = "Leonardo";
+    var answers3 = "Donatello";
+    var answers4 = "Raphael";
 
     //creating variables for each answer button
     var questionContainer = document.createElement("div");
@@ -1102,8 +1107,8 @@ function question1x(){
 
     //create eventListener
     answerlist1.addEventListener("click", wrong);
-    answerlist2.addEventListener("click", wrong);
-    answerlist3.addEventListener("click", correct);
+    answerlist2.addEventListener("click", correct);
+    answerlist3.addEventListener("click", wrong);
     answerlist4.addEventListener("click", wrong);
 
     function correct(){
@@ -1128,11 +1133,11 @@ function question1x(){
 function question2x(){
 
     //variables for the question and answers
-    var question = "Will I ever get this done?";
-    var answers1 = "yes";
-    var answers2 = "no";
-    var answers3 = "maybe";
-    var answers4 = "probably not";
+    var question = "var Gary === goodTeacher";
+    var answers1 = "False";
+    var answers2 = "False";
+    var answers3 = "True";
+    var answers4 = "False";
 
     //creating variables for each answer button
     var questionContainer = document.createElement("div");
