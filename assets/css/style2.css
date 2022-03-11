@@ -107,13 +107,13 @@
     padding: 1.5rem;
 }
 
-.answer-content{
+#answer-content{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.answer-content button {
+#answer-content button {
     width: 97%;
 }
 
