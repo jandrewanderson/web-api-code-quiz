@@ -12,7 +12,7 @@ The purpose of this assignment was to create a program in javascript will genera
 
 ## Link to the Final Page and GitHub
 
-[Here is a link to my final page](https://jandrewanderson.github.io/generate.password/)
+[Here is a link to my final page](https://jandrewanderson.github.io/web-api-code-quiz/)
 
 [Here is the link to my Github Repository](https://github.com/jandrewanderson/web-api-code-quiz)
 

@@ -50,14 +50,21 @@ function countdown() {
             return; //if user hits cancel the high score will not be tracked by their name.
         }
         //now you need to display the text in the highscore page
-        
-        var highScoreEntryItem = document.createElement("li");
-        highScoreEntryItem.textContent = bestScores + score;
-        highScoreEntry.appendChild(highScoreEntryItem);
+        updateHighScore();
       }
       //
     }, 1000);
 }
+
+//I am not sure why this is not working.
+function updateHighScore(){
+    var highScoreEntryLi = document.createElement("li");
+    var highScoreEntryOl = document.createElement("ol");
+    highScoreEntryLi.textContent = bestScores + score;
+    highScoreEntry.appendChild(highScoreEntryOl);
+    highScoreEntryOl.appendChild(highScoreEntryLi);
+}
+
 
 //this is what will load the next question.
 function goToQuestion1(){
@@ -234,7 +241,7 @@ function question1(){
             score = score+1;
         }
         console.log(score);
-        answerlist3.setAttribute("style", "background-color: #00a2ff; color: black; outline: 3px solid black; border-radius: 5px; margin: 1rem; padding 1.5rem; font-size: 50%; height: 5.3rem;");
+        answerlist4.setAttribute("style", "background-color: #00a2ff; color: black; outline: 3px solid black; border-radius: 5px; margin: 1rem; padding 1.5rem; font-size: 50%; height: 5.3rem;");
         //removeChild to make space for the next question
         answerContent.removeChild(questionContainer);
         questionContainer.removeChild(answerlist1);
